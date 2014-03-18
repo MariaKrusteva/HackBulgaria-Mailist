@@ -5,8 +5,8 @@ def show_lists(filePath):
     """
     Returns a list of the files with names
     """
-    list_of_files = os.listdir(filePath)
+    list_of_files = sorted(os.listdir(filePath))
     result = ""
-    for i in range(1, len(list_of_files)):
-        result += "[{}] - {}\n".format(i, list_of_files[i])
+    for i in range(0, len(list_of_files)):
+        result += "[{}] - {}\n".format(i+1, list_of_files[i])
     return result
