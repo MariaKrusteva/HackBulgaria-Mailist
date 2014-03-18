@@ -26,7 +26,6 @@ class testFunctionality(unittest.TestCase):
         """
         Creates some test files in the given folder
         """
-
         self.addTestFiles()
 
     def testShow_lists(self):
