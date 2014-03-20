@@ -38,6 +38,9 @@ class testFunctionality(unittest.TestCase):
         self.assertEqual("[1] - testFile1\n[2] - testFile2\n[3] - testFile3\n",
                          list_functionality.show_lists(self.path))
 
+    def test_add(self):
+        self.assertEqual(False, list_functionality.add(self.path, "golfo"))
+
     def tearDown(self):
         call("rm -r " + self.path, shell=True)
 
