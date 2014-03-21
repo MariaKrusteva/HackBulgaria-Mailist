@@ -17,7 +17,6 @@ class testFunctionality(unittest.TestCase):
         self.filecreate = open(self.fileName, "w")
         self.filecreate.write("rado - asdf@\ndancho - dani@\nkiro - golf@\n")
         self.filecreate.close()
-    #Creating 2nd test file
         self.fileName = self.path + "testFile2"
         self.filecreate = open(self.fileName, "w")
         self.filecreate.write("rado - asdf@\ndancho - dani@\nkiro - golf@\n")
