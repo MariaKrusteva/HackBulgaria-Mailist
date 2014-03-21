@@ -16,3 +16,10 @@ class MailListAdapter(MailList):
 
     def update(self, new_name):
         self.name = new_name
+
+    def get_name_at_index_from_contacts(self, index):
+        i = 1
+        for key in sorted(self.contacts):
+            if i == index:
+                return key
+            i += 1
