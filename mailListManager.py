@@ -1,14 +1,13 @@
 from mailListAdapter import MailListAdapter
 
 
-class ManagerMailList:
+class MailListManager:
     """docstring for Interface    def __init__(self, arg)"""
 
     def __init__(self):
         self.path_to_lists = ""
         self.maillists = []
         self.load()
-        command = {"update": self.update}
 
     def create(self, list_name):
         list_handler = MailListAdapter(list_name)
@@ -23,3 +22,5 @@ class ManagerMailList:
     def merge_lists(self):
         pass
 
+    def load(self):
+        pass
