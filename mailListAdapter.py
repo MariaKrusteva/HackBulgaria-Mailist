@@ -10,7 +10,8 @@ class MailListAdapter(MailList):
         result = ""
         i = 1
         for key in sorted(self.contacts):
-            result += "[{}]".format(i) + key + " - " + self.contacts[key] + "\n"
+            result += "[{}]".format(i) + key + " - " \
+                + self.contacts[key] + "\n"
             i += 1
         return result
 
@@ -23,3 +24,13 @@ class MailListAdapter(MailList):
             if i == index:
                 return key
             i += 1
+
+    def save(self):
+        result = ""
+        for key in sorted(self.contacts):
+            result += key + " - " + self.contacts[key] + "\n"
+        file_to_save = open("user_lists/" + self.name, "w")
+        file_to_save.write(result)
+        file_to_save.close()
+
+ 
